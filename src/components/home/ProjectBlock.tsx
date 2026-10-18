@@ -3,6 +3,7 @@ import type { ComponentType } from "react";
 import type { Project } from "@/content/site";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { ChipList } from "@/components/ui/Chip";
+import { RightsNotice } from "@/components/ui/RightsNotice";
 import { StatusDot } from "@/components/ui/StatusDot";
 import { CrmPlatformDiagram } from "@/components/visuals/CrmPlatformDiagram";
 import { CurriculumPipeline } from "@/components/visuals/CurriculumPipeline";
@@ -85,6 +86,7 @@ export function ProjectBlock({ project }: { project: Project }) {
             </ButtonLink>
           )}
         </div>
+        {slug === "marg" && <RightsNotice variant="compact" />}
       </div>
 
       <div className="order-first min-w-0 lg:order-none">

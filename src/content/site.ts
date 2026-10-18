@@ -230,6 +230,19 @@ export const projects: Project[] = [
   },
 ];
 
+// Public, dated ownership marker for MARG. Shown on the home page, the case study and in the terminal,
+// and emitted as machine-readable copyright metadata on /work/marg.
+export const margRights = {
+  firstDocumented: "2026-01-24", // MARG design repository created
+  firstDocumentedLabel: "24 January 2026",
+  short: "© 2026 Aditya Chavan · Concept, idea and design by Aditya Chavan · All rights reserved",
+  authorship:
+    "MARG (Mumbai Ambulance Rapid Gateway), including its concept, idea, system design, architecture, written materials and diagrams, was conceived, designed and authored solely by Aditya Chavan. It was first documented on 24 January 2026.",
+  reservation:
+    "© 2026 Aditya Chavan. All rights reserved. No part of MARG may be copied, reproduced, adapted, implemented, commercialised, or used to train, fine-tune or prompt AI systems, by any person, company or automated agent, without Aditya Chavan's prior written permission.",
+  contact: "For permission or collaboration, contact adityachavan271@gmail.com.",
+};
+
 export const services = [
   { code: "S/01", title: "Backend systems & APIs", text: "APIs and services in Java/Spring Boot or Python, with proper auth, permissions and audit trails, built to stay correct under failure.", proof: "→ 2,300+ tests on a six-org platform", href: "/work/crm-platform" },
   { code: "S/02", title: "Products on Google Cloud", text: "From empty repo to production: Cloud Run, Cloud SQL, CI/CD, secrets and monitoring, set up so deploys are boring.", proof: "→ gateway live in under two months", href: "/work/api-gateway" },

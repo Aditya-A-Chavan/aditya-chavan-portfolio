@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { StatusDot } from "@/components/ui/StatusDot";
-import { about, certifications, experience, profile, projects, skills } from "@/content/site";
+import { about, certifications, experience, margRights, profile, projects, skills } from "@/content/site";
 
 export const PROMPT = "aditya@portfolio:~$";
 export const SUGGESTIONS = ["help", "whoami", "ls projects", "contact"];
@@ -195,6 +195,7 @@ export async function run(raw: string, act: Actions): Promise<ReactNode | typeof
       return (
         <>
           <p>{firstSentence(marg.story)}</p>
+          <p className="text-muted">{margRights.short}</p>
           <Link href={`/work/${marg.slug}`} className={linkClass} onClick={act.close}>
             {marg.caseStudyLabel} →
           </Link>

@@ -1,4 +1,5 @@
 import { MargIntro } from "@/components/case-study/MargIntro";
+import { RightsNotice } from "@/components/ui/RightsNotice";
 import type { CaseStudy } from "./types";
 
 const P = "mb-5 leading-relaxed text-soft";
@@ -50,7 +51,14 @@ const marg: CaseStudy = {
     team: "Solo",
     stack: "Planned: Android apps, real-time backend, WebSockets, proximity engine",
   },
-  intro: <MargIntro />,
+  intro: (
+    <>
+      <MargIntro />
+      <div className="mx-auto w-full max-w-[1440px] px-4 pt-12 sm:px-6 lg:px-10">
+        <RightsNotice />
+      </div>
+    </>
+  ),
   sections: [
     {
       id: "who-and-what",
